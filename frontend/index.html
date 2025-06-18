@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 Update</title>
+</head>
+<body>
+  <h1>Send a Message to ESP32</h1>
+  <form id="messageForm">
+    <div>
+      <label for="message">Message:</label>
+      <input type="text" id="message" name="message" required>
+    </div>
+    <div>
+      <label for="authToken">Auth Token:</label>
+      <input type="text" id="authToken" name="authToken" required>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+
+  <br>
+  <button id="authenticateButton">Authenticate WebSocket Connection</button>
+
+  <div id="websocket-container">
+    <h2>WebSocket Stream</h2>
+    <div id="connection-status">WebSocket Status: Disconnected</div>
+    <div id="authentication-status">Authentication Status: Not Authenticated</div>
+    <div id="websocket-messages">
+      <ul id="messages-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
